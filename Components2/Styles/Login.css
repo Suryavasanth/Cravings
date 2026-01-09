@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+.login-page {
+  min-height: 100vh;
+  background: #fdfaf7;
+}
+
+/* Login Card Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+/* Card */
+.login-card {
+  width: 460px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height:530px;
+}
+
+/* Logo inside card */
+.card-logo {
+  width: 52px;
+  height: 52px;
+  background: #f35b25;
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Headings */
+.login-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #777;
+}
+
+/* Fields */
+.field {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.field label {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot {
+  font-size: 14px;
+  color: #f35b25;
+  cursor: pointer;
+}
+
+/* Inputs */
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 8px;
+}
+
+.input-box:focus-within {
+  border-color: #f35b25;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+}
+
+/* Eye Icon */
+.eye {
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease;
+}
+
+.eye:hover {
+  transform: scale(1.1);
+}
+
+/* Button */
+.signin-btn {
+  width: 100%;
+  background: #f35b25;
+  color: #fff;
+  border: none;
+  padding: 13px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.signin-btn:hover {
+  background: #e24f1f;
+}
+
+/* Footer */
+.footer-text {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #666;
+}
+
+.footer-text span {
+  color: #f35b25;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* ===== BACKDROP ===== */
+.premium-loader-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* ===== CARD ===== */
+.premium-loader-card {
+  background: #fff;
+  padding: 26px 32px;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ===== SPINNER ===== */
+.premium-spinner {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid #eee;
+  border-top: 3px solid #ff6b35;
+  animation: premiumSpin 1s ease-in-out infinite;
+}
+
+/* ===== TEXT ===== */
+.premium-loader-card span {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes premiumSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+

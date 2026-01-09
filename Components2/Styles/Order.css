@@ -1,0 +1,504 @@
+/* =========================
+   PAGE BASE
+========================= */
+.orders-page {
+  height: 85vh;
+  background: #fffaf7;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1f2937;
+}
+
+/* =========================
+   HEADER
+========================= */
+.orders-header {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 24px 
+}
+
+.orders-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #2b2320;
+}
+
+.orders-header p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+.orders-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 24px 36px;
+}
+
+.orders-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2b2320;
+}
+
+.orders-sub {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   ORDER CARD (COMPACT)
+========================= */
+.order-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:140px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   LEFT SECTION
+========================= */
+.order-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.order-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff1e6;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  position: relative;
+  bottom: 10px;
+  color: #ff7a00;
+}
+
+/* INFO */
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.order-id-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  top: 25px;
+}
+
+.order-id {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 2px;
+  color: #241ba1;
+}
+
+.item-count {
+  background: #f3f0ed;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 11.5px;
+  color: #14f044;
+}
+
+.order-time {
+  font-size: 12.5px;
+  color: #7a6f68;
+  padding-left: 5px;
+}
+
+.order-status {
+  font-size: 11.5px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: #fff1e6;
+  color: #ff7a00;
+  width: fit-content;
+   position: relative;
+  bottom: 2px;
+}
+
+/* =========================
+   RIGHT SECTION
+========================= */
+.order-right {
+  text-align: right;
+  min-width: 120px;
+}
+
+.order-amount {
+  font-size: 19px;
+  font-weight: 700;
+  position: relative;
+  bottom: 10px;
+  right: 20px;
+  color: #111827;
+}
+
+/* =========================
+   ORDER IMAGES
+========================= */
+.order-images {
+  display: flex;
+  justify-content: flex-end;
+    overflow: visible; 
+}
+
+.order-images img {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  margin-left: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.order-images img:first-child {
+  margin-left: 0;
+}
+
+.more-items {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  background: #f1f1f1;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+
+
+
+/* Show image name on hover */
+.order-images img:hover::after {
+  content: attr(alt);
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+.order-images img::after {
+  opacity: 0;
+}
+
+/* =========================
+   EMPTY STATES
+========================= */
+.orders-empty {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffaf7;
+  text-align: center;
+}
+.orders-empty h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2b2320;
+}
+
+.empty-sub {
+  font-size: 15px;
+  color: #9a6b54;
+  margin-bottom: 20px;
+  max-width: 320px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.browse-btn,
+.orders-login-btn {
+  background: #f97316;
+  color: #ffffff;
+  border: none;
+  padding: 11px 26px;
+  font-size: 14.5px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(249, 115, 22, 0.35);
+  transition: all 0.25s ease;
+}
+
+.browse-btn:hover,
+.orders-login-btn:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   LOGIN EMPTY BOX
+========================= */
+.orders-box {
+  text-align: center;
+}
+
+.orders-icon {
+  width: 70px;
+  height: 70px;
+  background: #f3ede8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #7a6f68;
+  margin: 0 auto 20px;
+}
+
+/* =========================
+   LOADER
+========================= */
+.loader-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 250, 247, 0.85);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+}
+
+.loader-card {
+  background: #ffffff;
+  padding: 26px 34px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.15);
+}
+
+.ring-loader {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #f3f0ed;
+  border-top: 4px solid #f97316;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 12px;
+}
+
+.loader-card p {
+  font-size: 13.5px;
+  color: #6b7280;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .order-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .order-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .order-amount {
+    font-size: 17px;
+  }
+}
+
+
+/* ===== HEADER ===== */
+.orders-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 120px;
+}
+
+.orders-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1c1c1c;
+  margin-bottom: 6px;
+}
+
+.orders-header p {
+  font-size: 15px;
+  color: #8f8f8f;
+}
+
+/* ===== EMPTY STATE ===== */
+.orders-empty1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(-60px);
+  position: relative;
+  bottom: 40px;
+}
+
+.empty-icon-wrapper {
+  position: relative;
+  right: 45px;
+}
+.empty-icon {
+  font-size: 40px;
+  color: #9b948d;
+  background: none;
+  line-height: 1;
+}
+
+/* TEXT */
+.orders-empty h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 10px;
+}
+.browse-btn:active {
+  transform: scale(0.97);
+}
+@media (max-width: 600px) {
+
+  /* CARD */
+  .order-card {
+    height: auto; /* 🔑 important */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  /* RESET DESKTOP POSITIONING */
+  .order-icon,
+  .order-id-row,
+  .order-amount {
+    position: static;
+  }
+
+  /* LEFT */
+  .order-left {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .order-info {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .order-id-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .order-time {
+    font-size: 12px;
+    padding-left: 0;
+    white-space: normal;
+  }
+
+  .order-status {
+    margin-top: 2px;
+  }
+
+  /* RIGHT */
+  .order-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+
+  .order-amount {
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .order-images img,
+  .more-items {
+    width: 34px;
+    height: 34px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .order-card {
+    height: auto;
+    align-items: flex-start;
+  }
+
+  /* RESET DESKTOP OFFSETS */
+  .order-id-row,
+  .order-amount {
+    position: static;
+  }
+
+  .order-left {
+    flex: 1;
+  }
+
+  .order-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .order-amount {
+    font-size: 17px;
+    white-space: nowrap;
+  }
+}
+
+
+
+
